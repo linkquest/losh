@@ -1,0 +1,61 @@
+/* pre-header*/
+#pre-header{
+    @include font-size(20/16);
+    color: $color__light;
+    .announcement-bar{
+        height: 50px;
+        background-color: #ff8017;
+        line-height: 50px;
+        z-index: 99999;
+        position: relative;
+        box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.32);
+    }
+    .announcement{
+        width: (2/3) * 100%;
+        float: left;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 1;
+        margin-top: 18px;
+    }
+    .losh-search{
+        width: (1/3) * 100%;
+        float: right;
+    }
+    #searchform{
+        float: right;
+        position: relative;
+        label{
+            line-height: 1;
+            margin-top: 18px;
+            display: block;
+            float: left;
+            margin-right: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        input[type="text"] {
+            color: #666;
+            border: none;
+            border-radius: 15px;
+            padding: 3px 30px 3px 10px;
+        }
+        button{
+            border: none;
+            border-color: #ccc #ccc #bbb;
+            border-radius: 3px;
+            background: transparent;
+            color: orange;
+            font-size: 12px;
+            font-size: 1rem;
+            line-height: 1;
+            padding: 0;
+            position: absolute;
+            right: 10px;
+            top: 17px;
+        }
+    }
+    
+}
+
+

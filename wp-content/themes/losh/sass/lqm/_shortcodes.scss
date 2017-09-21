@@ -1,0 +1,68 @@
+/*
+Mediavandals Ltd. / LinkQuest Marketing
+*/
+/* 
+    Created on : Nov 13, 2014, 3:36:48 PM
+    Author     : Dave Perry - MediaVandals.com
+*/
+$width__margin: 1.5;
+@mixin columns($col, $parts, $margin) {
+    width:((100%-( $col - 1)*$margin)/$col)* $parts +( ( $parts - 1 ) * $margin);
+    &.square{height:0; padding-bottom:((100%-( $col - 1)*$margin)/$col)* $parts +( ( $parts - 1 ) * $margin);}
+}
+    .onecol-one{@include columns(1,1, $width__margin);}
+    .twocol-one{@include columns(2,1, $width__margin);}
+    .threecol-one{@include columns(3,1, $width__margin);}
+    .threecol-two{@include columns(3,2, $width__margin);}
+    .fourcol-one{@include columns(4,1, $width__margin);}
+    .fourcol-two{@include columns(4,2, $width__margin);}
+    .fourcol-three{@include columns(4,3, $width__margin);}
+    .fivecol-one{@include columns(5,1, $width__margin);}
+    .fivecol-two{@include columns(5,2, $width__margin);}
+    .fivecol-three{@include columns(5,3, $width__margin);}
+    .fivecol-four{@include columns(5,4, $width__margin);}
+    .sixcol-one{@include columns(6,1, $width__margin);}
+    .sixcol-two{@include columns(6,2, $width__margin);}
+    .sixcol-three{@include columns(6,3, $width__margin);}
+    .sixcol-four{@include columns(6,4, $width__margin);}
+    .sixcol-five{@include columns(6,5, $width__margin);}
+    .onecol-one,.twocol-one,.threecol-one,.threecol-two,.fourcol-one,.fourcol-two,.fourcol-three,.fivecol-one,.fivecol-two,.fivecol-three,.fivecol-four,.sixcol-one,.sixcol-two,.sixcol-three,.sixcol-four,.sixcol-five
+        {float:left;
+         margin-right:$width__margin + 0%;
+         margin-bottom:$width__margin + 0%;
+         position:relative;
+/*         padding:15px;*/
+         /*border:1px solid #fff;*/
+        }
+/*        .onecol-one{
+            margin-bottom:$width__margin + 0%;;
+            position:relative;
+            padding:15px;  
+        }*/
+    .last{clear:right;margin-right:0 ;}
+    @media only screen and (max-width: 767px) {
+            .onecol-one, .twocol-one,.threecol-one,.threecol-two,.fourcol-one,.fourcol-two,.fourcol-three,.fivecol-one,.fivecol-two,.fivecol-three,.fivecol-four,.sixcol-one,.sixcol-two,.sixcol-three,.sixcol-four,.sixcol-five
+            {margin-right: 0; width: 100% ;}
+    }
+
+.shortcode-display {
+    
+    clear: both;
+    overflow: hidden;
+
+    h1 {
+    display:inline;
+    @include breakpoint(640px) {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+        &:after {
+        content: "";
+        display: block;
+        }
+    }
+    p {
+        margin-bottom: 5px;
+        font-size: 10px;
+       }
+}

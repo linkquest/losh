@@ -1,0 +1,48 @@
+/*site branding*/
+$width__logo: 240px;
+.site-branding{
+    height: 88px;
+    background-color: white;
+    .site-title,
+    .site-description{
+        display: none;
+    }
+    .custom-logo-link{
+        display: block;
+        position: relative;
+        top: -4px;
+        max-width: $width__logo;
+        float: left;
+    }
+    nav{
+        width: calc( 100% - #{$width__logo} );
+        float: left;
+        line-height: 1;
+        margin-top: 40px;
+        text-transform: uppercase;
+        color: $color__green;
+        letter-spacing: 1px;
+        @include font-size(20/16);
+        clear: none;
+        ul{
+            padding-left:30px;
+            li{
+                padding-right: 20px;
+                a{
+                    color: $color__green;
+                    &:hover{
+                        color:$color__orange;
+                    }
+                }
+                &.current-menu-item,
+                &.current_page_item{
+                    a{
+                        color: $color__orange;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+

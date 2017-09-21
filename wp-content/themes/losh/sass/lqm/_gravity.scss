@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7-Apr-2015, 2:26:49 PM
+    Author     : Dave6
+*/
+.gform_wrapper input[type=text], .gform_wrapper input[type=url], .gform_wrapper input[type=email], .gform_wrapper input[type=tel], .gform_wrapper input[type=number], .gform_wrapper input[type=password] {
+      padding: .313em!important;
+    font-family: arial, 'sans-serif'!important
+}
+.gform_wrapper select, .gform_wrapper textarea {
+    padding: 0.313em !important;
+    color: #666 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 3px !important;
+}
+@include breakpoint(768px){
+    .highpoint-form input[type=submit] {
+        padding: 10px 10px!important;
+    }
+}

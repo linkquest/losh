@@ -1,0 +1,69 @@
+/*
+5.3 Social Media Menu
+*/
+
+/* Social Menu 
+Uses FontAwesome Icons
+*/
+
+.menu-social ul {
+    float: right;
+    text-align: center;
+    list-style: none;   
+    margin:12px 0 0 0;
+    @include breakpoint (768px) {
+        margin:5px 25px 0 0;
+        height:24px;
+        display: block;
+        }
+    li a { 
+        @include breakpoint(768px){
+        padding-left:.5em;
+        padding-right: .5em;
+    }
+}
+    
+}
+
+.menu-social ul li {
+    position: relative;
+    display:  inline-block; 
+    padding-right:10px;
+}
+
+
+.menu-social li a {
+	background: url('images/social-sprite.png') no-repeat;
+	width: 24px;
+	height: 24px;
+        &:hover {
+            opacity:.6;
+        }
+}
+.menu-social li a[href*="facebook.com"] { background-position: 0 0; }
+
+.menu-social li a[href*="twitter.com"]{ background-position: -32px 0; }
+
+.menu-social li a[href*="dribbble.com"]{ background-position: -160px 0; }
+
+.menu-social li a[href*="plus.google.com"]{ background-position: -160px 0; }
+
+.menu-social li a[href*="pinterest.com"]{ background-position: -160px 0; }
+
+.menu-social li a[href*="github.com"]{ background-position: -160px 0; }
+
+.menu-social li a[href*="tumblr.com"]{ background-position: -160px 0; }
+
+.menu-social li a[href*="youtube.com"]{ background-position: -96px 0; }
+
+.menu-social li a[href*="flickr.com"]{ background-position: -160px 0; }
+
+.menu-social li a[href*="vimeo.com"]{ background-position: -160px 0; }
+
+.menu-social li a[href*="instagram.com"]{ background-position: -65px 0; }
+
+.menu-social li a[href*="linkedin.com"]{ background-position: -160px 0; }
+
+.menu-social li a[href*="snapchat.com"]{ background-position: -128px 0; }
+                    
+

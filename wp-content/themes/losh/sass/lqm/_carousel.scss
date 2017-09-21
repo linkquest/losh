@@ -1,0 +1,23 @@
+/* Carousel */
+#losh-carousel{
+    height: 11.3vw;
+    max-height: 215px;
+    padding: 1vw 0;
+    // Needs latest Compass, add '@import "compass"' to your scss
+    // Permalink - use to edit and share this gradient:
+    // http://colorzilla.com/gradient-editor/#1e5799+0,a0bddf+0,c9daef+100
+    background-color: #1e5799; // Old browsers
+    @include filter-gradient(#1e5799, #c9daef, vertical); // IE6-9
+    @include background-image(linear-gradient(top, #1e5799 0%,#a0bddf 0%,#c9daef 100%));
+    .losh-slide{
+        max-width: 172px;
+        padding: 0 10px;
+        img{
+            width: 100%;
+            height: auto;
+            
+        }
+    }
+}
+
+
