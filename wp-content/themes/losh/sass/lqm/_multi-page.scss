@@ -1,0 +1,21 @@
+    #losh-background{
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left:0;
+        height: 100vh;
+        width: 100%;
+        background-attachment: fixed;
+        background-image: url(http://mediavandals.yourdevsite.ca/losh/wp-content/uploads/2017/09/forest-2.jpg);
+    }
+    // fix stacking order of elements
+    #page{
+        position: relative;
+        z-index: 2;
+    }
+section.multi-page{
+        height: 100vh;
+        width: 100vw;
+        background-color: transparent;
+            }
+

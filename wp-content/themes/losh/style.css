@@ -286,7 +286,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #9c9c9c;
+  background: transparent;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -570,7 +570,8 @@ a {
 .site-header:after,
 .site-content:after,
 .site-footer:after {
-  clear: both; }
+  clear: both;
+  display: inline; }
 
 /*--------------------------------------------------------------
 # Widgets
@@ -633,6 +634,55 @@ button.menu-toggle {
 /*--------------------------------------------------------------
 10.5 Footer
 --------------------------------------------------------------*/
+footer#colophon .site-info {
+  height: 62px;
+  line-height: 62px;
+  background-color: #ffffff;
+  padding-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  footer#colophon .site-info .threecol-one {
+    margin-bottom: 0; }
+    @media (max-width: 768px) {
+      footer#colophon .site-info .threecol-one {
+        margin-bottom: 4%; } }
+  footer#colophon .site-info .losh-copyright,
+  footer#colophon .site-info .mv-byline {
+    color: #ff8017; }
+  footer#colophon .site-info .losh-footer-menu {
+    color: #538864; }
+    footer#colophon .site-info .losh-footer-menu ul {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin: 0; }
+      footer#colophon .site-info .losh-footer-menu ul li {
+        position: relative;
+        display: inline;
+        padding-right: 30px; }
+        footer#colophon .site-info .losh-footer-menu ul li:after {
+          content: "\f111";
+          font-family: fontawesome;
+          font-size: 8px;
+          position: absolute;
+          right: 9px;
+          top: 9px;
+          line-height: 1; }
+        footer#colophon .site-info .losh-footer-menu ul li:last-child:after {
+          content: ""; }
+    footer#colophon .site-info .losh-footer-menu a {
+      color: #538864;
+      text-decoration: none; }
+      footer#colophon .site-info .losh-footer-menu a:hover {
+        color: #ff8017; }
+  footer#colophon .site-info .mv-byline {
+    text-align: right; }
+    footer#colophon .site-info .mv-byline a {
+      color: #ff8017;
+      text-decoration: none; }
+      footer#colophon .site-info .mv-byline a:hover {
+        color: #538864; }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -955,12 +1005,40 @@ Mediavandals Ltd. / LinkQuest Marketing
     .site-branding nav ul {
       padding-left: 30px; }
       .site-branding nav ul li {
-        padding-right: 20px; }
+        padding-right: 30px; }
+        .site-branding nav ul li:after {
+          content: "\f111";
+          font-family: fontawesome;
+          font-size: 8px;
+          position: absolute;
+          right: 11px;
+          top: 3px; }
+        .site-branding nav ul li:last-child:after {
+          content: ""; }
         .site-branding nav ul li a {
           color: #538864; }
           .site-branding nav ul li a:hover {
             color: #ff8017; }
         .site-branding nav ul li.current-menu-item a, .site-branding nav ul li.current_page_item a {
           color: #ff8017; }
+
+#losh-background {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-image: url(http://mediavandals.yourdevsite.ca/losh/wp-content/uploads/2017/09/forest-2.jpg); }
+
+#page {
+  position: relative;
+  z-index: 2; }
+
+section.multi-page {
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent; }
 
 /*# sourceMappingURL=style.css.map */

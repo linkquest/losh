@@ -20,4 +20,5 @@
 .site-content:after,
 .site-footer:after {
 	@include clearfix-after;
+        display:  inline;
 }

@@ -6,7 +6,7 @@
  *
  * @package Losh_Bears
  */
-
+return; // no sidebars in this site
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }

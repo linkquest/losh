@@ -46,6 +46,9 @@ if ( ! function_exists( 'losh_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'losh' ),
 		) );
+                register_nav_menus( array(
+			'footer-menu' => esc_html__( 'Footer Menu', 'losh' ),
+		) );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
