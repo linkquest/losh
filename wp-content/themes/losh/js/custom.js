@@ -23,6 +23,12 @@ jQuery(document).ready(function($){
     autoplay: true,
     autoplaySpeed: 2000
   });
+  $(document).on('scroll',function(){
+      console.log('got scrolling happening');
+      $('section.multi-page').each(function(){
+          console.log( $(this).scrollTop() );
+      });
+  });
 
 });
 
