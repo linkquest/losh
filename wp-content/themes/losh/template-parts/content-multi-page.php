@@ -1,5 +1,11 @@
 <?php
-$bg = get_field('background_images', 'option');
+$bg = get_field('background_images', 'option');?>
+<style>
+<?php foreach( $bg as $i =>$image){?>
+    .bg<?php echo $i;?>{ background-image: url(<?php echo $image['image']['url'];?>);}
+<?php }?>
+    </style>
+<?php 
 $bg_cnt = count($bg);
 d($bg);
 d($bg_cnt);

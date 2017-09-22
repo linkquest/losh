@@ -1022,6 +1022,12 @@ Mediavandals Ltd. / LinkQuest Marketing
         .site-branding nav ul li.current-menu-item a, .site-branding nav ul li.current_page_item a {
           color: #ff8017; }
 
+body {
+  background-image: url(http://mediavandals.yourdevsite.ca/losh/wp-content/uploads/2017/09/forest-2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  transition: all 1.5s; }
+
 #losh-background {
   position: absolute;
   z-index: 1;
@@ -1029,8 +1035,7 @@ Mediavandals Ltd. / LinkQuest Marketing
   left: 0;
   height: 100vh;
   width: 100%;
-  background-attachment: fixed;
-  background-image: url(http://mediavandals.yourdevsite.ca/losh/wp-content/uploads/2017/09/forest-2.jpg); }
+  background-attachment: fixed; }
 
 #page {
   position: relative;
