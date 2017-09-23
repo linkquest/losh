@@ -1,7 +1,8 @@
 /*site branding*/
-$width__logo: 240px;
+$width__logo: (240/1014) *100%;
 .site-branding{
-    height: 88px;
+    /*height: 88px;*/
+    height: (88/1014) * 100vh;
     background-color: white;
     .site-title,
     .site-description{
@@ -13,16 +14,34 @@ $width__logo: 240px;
         top: -4px;
         max-width: $width__logo;
         float: left;
+        transition: all .5s;
+        img{
+            width: 100%
+        }
     }
+    &.logo-shrink{
+            /*height: 60px;*/
+            height: (60/1014) * 100vh;
+            top:3px;
+            img{
+                
+            }
+            .custom-logo-link{
+                top: 3px;
+            }
+            
+        }
     nav{
         width: calc( 100% - #{$width__logo} );
         float: left;
         line-height: 1;
-        margin-top: 40px;
+/*        margin-top: 40px;*/
+        margin-top: (40/1014)* 100vh;
         text-transform: uppercase;
         color: $color__green;
         letter-spacing: 1px;
-        @include font-size(20/16);
+        /*@include font-size(20/16);*/
+        font-size: (20/1014 ) * 100vh;
         clear: none;
         ul{
             padding-left:30px;
@@ -56,5 +75,11 @@ $width__logo: 240px;
             }
         }
     }
+    &.logo-shrink{
+  
+            nav{
+                margin-top:25px;
+            }
+        }
 }
 

@@ -1,5 +1,5 @@
 body{
-    background-image: url(http://mediavandals.yourdevsite.ca/losh/wp-content/uploads/2017/09/forest-2.jpg);
+    
     background-size: cover;
     background-attachment: fixed;
     transition: all 1.5s;
@@ -18,9 +18,77 @@ body{
         position: relative;
         z-index: 2;
     }
+    $height__menu: (60/1014)*100vh;
+    $height__menu-admin: ((60+32)/1014)*100vh;
 section.multi-page{
-        height: 100vh;
+        height: calc( 100vh - #{$height__menu} );
         width: 100vw;
         background-color: transparent;
-            }
+        position: relative;
+        padding:3vh 0 2% 0;
+        
+        .anchor-spacer{
+            position: absolute;
+            left:0;
+            /*top:-60px;*/
+            top: -#{$height__menu};
+            visibility: hidden;
+            height:1px;
+            width: 1px;
+        }
+        .image-only{
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+}
+.admin-bar section.multi-page{
+        height: calc( 100vh - #{$height__menu} - 32px );
+        .anchor-spacer{
+            top:-#{$height__menu-admin};
+        }
+}
+.wrapper{
+    height:100%;
+}
+section#losh-0 {
+    height: calc( 100vh - #{((353/1014) * 100vh)} );
+    .wrapper{
+        /*padding-bottom:40px;*/
+    }
+    
+}
+#scroll-down{
+    width: 60px;
+    position: fixed;
+    bottom: 40px;
+    right:30px;
+    opacity:.3;
+    &:hover{
+        opacity: 1;
+    }
+}
+#scroll-up{
+    width: 60px;
+    position: fixed;
+    top: 100px;
+       right:30px;
+    opacity:.3;
+    &:hover{
+        opacity: 1;
+    }
+}
+/* Image only section*/
+.image-only{
+    height: 100%;
+ 
+    img{
+        height:100%;
+        max-width:100%;
+        margin:auto;
+        display:block;
+        
+    }
+}
+
 

@@ -287,7 +287,8 @@ html {
 
 body {
   background: transparent;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  background-position: center; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -623,6 +624,13 @@ a {
   max-width: 1200px;
   width: 100%;
   margin: auto; }
+  @media (max-width: 1200px) {
+    .wrapper {
+      padding: 0 4%; } }
+
+header#masthead {
+  z-index: 9999;
+  position: relative; }
 
 button.menu-toggle {
   border: none;
@@ -911,9 +919,11 @@ Mediavandals Ltd. / LinkQuest Marketing
   font-size: 1.25rem;
   color: #ffffff; }
   #pre-header .announcement-bar {
-    height: 50px;
+    height: 4.93097vh;
+    /*height: 50px;*/
     background-color: #ff8017;
-    line-height: 50px;
+    line-height: 4.93097vh;
+    /*line-height: 50px;*/
     z-index: 99999;
     position: relative;
     box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.32); }
@@ -923,7 +933,7 @@ Mediavandals Ltd. / LinkQuest Marketing
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1;
-    margin-top: 18px; }
+    margin-top: 1.77515vh; }
   #pre-header .losh-search {
     width: 33.33333%;
     float: right; }
@@ -932,7 +942,7 @@ Mediavandals Ltd. / LinkQuest Marketing
     position: relative; }
     #pre-header #searchform label {
       line-height: 1;
-      margin-top: 18px;
+      margin-top: 1.77515vh;
       display: block;
       float: left;
       margin-right: 20px;
@@ -942,7 +952,8 @@ Mediavandals Ltd. / LinkQuest Marketing
       color: #666;
       border: none;
       border-radius: 15px;
-      padding: 3px 30px 3px 10px; }
+      /*padding: 3px 30px 3px 10px;*/
+      padding: 0.29586vh 30px 0.29586vh 10px; }
     #pre-header #searchform button {
       border: none;
       border-color: #ccc #ccc #bbb;
@@ -955,13 +966,14 @@ Mediavandals Ltd. / LinkQuest Marketing
       padding: 0;
       position: absolute;
       right: 10px;
-      top: 17px; }
+      top: 1.67653vh; }
 
 /* Carousel */
 #losh-carousel {
   height: 11.3vw;
   max-height: 215px;
   padding: 1vw 0;
+  visibility: hidden;
   background-color: #1e5799;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF1E5799', endColorstr='#FFC9DAEF');
@@ -980,7 +992,8 @@ Mediavandals Ltd. / LinkQuest Marketing
 
 /*site branding*/
 .site-branding {
-  height: 88px;
+  /*height: 88px;*/
+  height: 8.6785vh;
   background-color: white; }
   .site-branding .site-title,
   .site-branding .site-description {
@@ -989,18 +1002,28 @@ Mediavandals Ltd. / LinkQuest Marketing
     display: block;
     position: relative;
     top: -4px;
-    max-width: 240px;
-    float: left; }
+    max-width: 23.66864%;
+    float: left;
+    transition: all .5s; }
+    .site-branding .custom-logo-link img {
+      width: 100%; }
+  .site-branding.logo-shrink {
+    /*height: 60px;*/
+    height: 5.91716vh;
+    top: 3px; }
+    .site-branding.logo-shrink .custom-logo-link {
+      top: 3px; }
   .site-branding nav {
-    width: calc( 100% - 240px );
+    width: calc( 100% - 23.66864% );
     float: left;
     line-height: 1;
-    margin-top: 40px;
+    /*        margin-top: 40px;*/
+    margin-top: 3.94477vh;
     text-transform: uppercase;
     color: #538864;
     letter-spacing: 1px;
-    font-size: 20px;
-    font-size: 1.25rem;
+    /*@include font-size(20/16);*/
+    font-size: 1.97239vh;
     clear: none; }
     .site-branding nav ul {
       padding-left: 30px; }
@@ -1021,9 +1044,10 @@ Mediavandals Ltd. / LinkQuest Marketing
             color: #ff8017; }
         .site-branding nav ul li.current-menu-item a, .site-branding nav ul li.current_page_item a {
           color: #ff8017; }
+  .site-branding.logo-shrink nav {
+    margin-top: 25px; }
 
 body {
-  background-image: url(http://mediavandals.yourdevsite.ca/losh/wp-content/uploads/2017/09/forest-2.jpg);
   background-size: cover;
   background-attachment: fixed;
   transition: all 1.5s; }
@@ -1042,8 +1066,62 @@ body {
   z-index: 2; }
 
 section.multi-page {
-  height: 100vh;
+  height: calc( 100vh - 5.91716vh );
   width: 100vw;
-  background-color: transparent; }
+  background-color: transparent;
+  position: relative;
+  padding: 3vh 0 2% 0; }
+  section.multi-page .anchor-spacer {
+    position: absolute;
+    left: 0;
+    /*top:-60px;*/
+    top: -5.91716vh;
+    visibility: hidden;
+    height: 1px;
+    width: 1px; }
+  section.multi-page .image-only {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+
+.admin-bar section.multi-page {
+  height: calc( 100vh - 5.91716vh - 32px ); }
+  .admin-bar section.multi-page .anchor-spacer {
+    top: -9.07298vh; }
+
+.wrapper {
+  height: 100%; }
+
+section#losh-0 {
+  height: calc( 100vh - 34.81262vh ); }
+  section#losh-0 .wrapper {
+    /*padding-bottom:40px;*/ }
+
+#scroll-down {
+  width: 60px;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  opacity: .3; }
+  #scroll-down:hover {
+    opacity: 1; }
+
+#scroll-up {
+  width: 60px;
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  opacity: .3; }
+  #scroll-up:hover {
+    opacity: 1; }
+
+/* Image only section*/
+.image-only {
+  height: 100%; }
+  .image-only img {
+    height: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: block; }
 
 /*# sourceMappingURL=style.css.map */
